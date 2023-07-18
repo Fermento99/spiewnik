@@ -1,0 +1,147 @@
+%
+% Example based on documentation for the songs project:
+% http://songs.sourceforge.net/
+%
+\documentclass[14pt]{extarticle}%TUTAJ WIELKOŚĆ
+
+\usepackage[chorded]{songs}
+\usepackage[margin=1.5cm,footskip=0.25in,headheight=34.5pt]{geometry}
+\usepackage{polski}
+ \usepackage{lipsum}
+ \usepackage{microtype}
+ \usepackage{vwcol} 
+ \usepackage{hyperref}
+\hypersetup{
+    linktoc=all,     %set to all if you want both sections and subsections linked
+    linkcolor=blue,  %choose some color if you want links to stand out
+}
+
+
+  
+\begin{document}
+\newcommand{\pios}[3]{
+\section{
+#1
+}
+\noindent
+\begin{minipage}[t]{
+0.7\textwidth
+}
+#2
+\end{minipage}%
+\begin{minipage}[t]{0.3\textwidth}
+#3
+\end{minipage}%
+}
+\newcommand{\reflyrics}[1]{
+\hspace*{1cm}%Refren
+\begin{minipage}{.8\textwidth}%
+#1
+\end{minipage}%
+}
+\newcommand{\refchords}[1]{\hspace*{-1cm}
+\begin{minipage}{.8\textwidth}%REFREN
+#1
+
+\end{minipage}%
+}
+
+\tableofcontents
+
+\section{
+Pożegnanie Liverpoolu
+}
+\noindent
+\begin{minipage}[t]{
+0.7\textwidth
+}
+1. Żegnaj nam dostojny, stary porcie,
+
+Rzeko Mersey żegnaj nam! 
+
+Zaciągnąłem się na rejs do Kalifornii, 
+
+Byłem tam już niejeden raz. 
+\\\\
+\hspace*{1cm}%Refren
+\begin{minipage}{.8\textwidth}%
+Ref.: A więc żegnaj mi, kochana ma! 
+
+Za chwilę wypłyniemy w długi rejs. 
+
+Ile miesięcy Cię nie będę widział, 
+
+Nie wiem sam, 
+
+Lecz pamiętać zawsze będę Cię.
+\end{minipage}%
+\\
+
+2. Zaciągnąłem się na herbaciany kliper,
+
+Dobry statek, choć sławę ma złą,
+
+A że kapitanem jest tam stary Burgess,
+
+Pływającym piekłem wszyscy go zwą.\\
+
+
+3. Z kapitanem tym płynę już nie pierwszy raz,
+
+Znamy się od wielu, wielu lat.
+
+Jeśliś dobrym żeglarzem – radę sobie dasz,
+
+Jeśli nie – toś cholernie wpadł.\\
+
+4. Żegnaj nam dostojny, stary porcie,
+
+Rzeko Mersey żegnaj nam.
+
+Wypływamy już na rejs do Kalifornii,
+
+Gdy wrócimy – opowiemy wam.
+\\\\
+\hspace*{1cm}%\\
+\begin{minipage}{.8\textwidth}%
+Ref.: A więc żegnaj mi, kochana ma! 
+
+Za chwilę wypłyniemy w długi rejs. 
+
+Ile miesięcy Cię nie będę widział, 
+
+Nie wiem sam, 
+
+Lecz pamiętać zawsze będę Cię. 
+\end{minipage}%
+\end{minipage} % no space if you would like to put them side by side
+\begin{minipage}[t]{0.3\textwidth}
+C C7 F C
+
+C G
+
+C C7 F C
+
+C G C
+\\
+
+\hspace*{-1cm}%
+\begin{minipage}{.8\textwidth}%
+G F C
+
+C G
+
+C C7
+
+F C 
+
+C G7 C
+\end{minipage}%
+
+\end{minipage}
+
+\include{Piosenki/bitwa}%USING CUSTOM COMMANDS
+\include{Piosenki/biala_sukienka}
+\include{Piosenki/bijatyka}
+
+\end{document}
